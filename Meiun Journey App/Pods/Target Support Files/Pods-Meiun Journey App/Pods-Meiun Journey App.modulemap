@@ -1,0 +1,6 @@
+framework module Pods_Meiun_Journey_App {
+  umbrella header "Pods-Meiun Journey App-umbrella.h"
+
+  export *
+  module * { export * }
+}
