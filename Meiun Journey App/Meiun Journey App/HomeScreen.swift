@@ -13,7 +13,11 @@ import GameplayKit
 class HomeScreen: SKScene {
     
     private var displaySize: CGRect!;
-    private var exp = 0;
+    public var exp = 0;
+    
+    private var agilityTouch = false;
+    
+    var PlayTextBox : SKSpriteNode!;
     
     override func didMove(to view: SKView) {
         displaySize = UIScreen.main.bounds;
@@ -65,12 +69,18 @@ class HomeScreen: SKScene {
         PlayText = SKLabelNode();
         
         PlayText.fontName = "Arial";
-        PlayText.fontColor = SKColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0);
+        PlayText.fontColor = SKColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
         PlayText.fontSize = 20.0;
-        PlayText.position = CGPoint(x: displaySize.width / 5.0, y: ExpText.position.y - 70.0);
+        PlayText.position = CGPoint(x: displaySize.width / 4.4, y: ExpText.position.y - 70.0);
         
         PlayText.text = "Agility Training";
         
+        PlayTextBox = SKSpriteNode.init(imageNamed: "IOSThin");
+        
+        PlayTextBox.position = CGPoint(x: PlayText.position.x + 2.5, y: PlayText.position.y + 10);
+        PlayTextBox.size = CGSize(width: PlayTextBox.size.width / 2, height: PlayTextBox.size.height / 2);
+        
+        addChild(PlayTextBox);
         addChild(PlayText);
         
 //        let ico = SKSpriteNode.init(imageNamed: "BlackIco")
@@ -78,6 +88,11 @@ class HomeScreen: SKScene {
     }
     
     func touchDown(atPoint pos : CGPoint) {
+        if(pos.x >= PlayTextBox.position.x - PlayTextBox.size.width / 2 && pos.x <= PlayTextBox.position.x + PlayTextBox.size.width / 2  && pos.y >= PlayTextBox.position.y - PlayTextBox.size.height / 2 && pos.y <= PlayTextBox.position.y + PlayTextBox.size.height / 2){
+            
+            
+            
+        }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -87,7 +102,6 @@ class HomeScreen: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     

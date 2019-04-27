@@ -22,6 +22,7 @@
 		9685A3C02233285F0074CA05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9685A3BF2233285F0074CA05 /* GoogleService-Info.plist */; };
 		9685A3C12233285F0074CA05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9685A3BF2233285F0074CA05 /* GoogleService-Info.plist */; };
 		9685A3C22233285F0074CA05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9685A3BF2233285F0074CA05 /* GoogleService-Info.plist */; };
+		96E503EB2275103D00CBFE7E /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E503EA2275103D00CBFE7E /* Platform.swift */; };
 		96F0BC54223AEF5600A52B73 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0BC53223AEF5600A52B73 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +64,8 @@
 		9685A3B1223327460074CA05 /* Meiun_Journey_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meiun_Journey_AppUITests.swift; sourceTree = "<group>"; };
 		9685A3B3223327460074CA05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9685A3BF2233285F0074CA05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		96F0BC53223AEF5600A52B73 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		96E503EA2275103D00CBFE7E /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		96F0BC53223AEF5600A52B73 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; tabWidth = 5; };
 		9A315AB6ADDF18A3F7B969D8 /* Pods-Meiun Journey App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meiun Journey App.debug.xcconfig"; path = "Target Support Files/Pods-Meiun Journey App/Pods-Meiun Journey App.debug.xcconfig"; sourceTree = "<group>"; };
 		B777EB6F19152F926DF793AA /* Pods_Meiun_Journey_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meiun_Journey_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CDFD613D2A2B157EA9E8B0 /* Pods-Meiun Journey App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meiun Journey App.release.xcconfig"; path = "Target Support Files/Pods-Meiun Journey App/Pods-Meiun Journey App.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				9685A393223327440074CA05 /* GameViewController.swift */,
 				96F0BC53223AEF5600A52B73 /* HomeScreen.swift */,
 				9685A395223327440074CA05 /* Main.storyboard */,
+				96E503EA2275103D00CBFE7E /* Platform.swift */,
 				9685A398223327460074CA05 /* Assets.xcassets */,
 				9685A39A223327460074CA05 /* LaunchScreen.storyboard */,
 				9685A39D223327460074CA05 /* Info.plist */,
@@ -411,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E503EB2275103D00CBFE7E /* Platform.swift in Sources */,
 				9685A392223327440074CA05 /* GameScene.swift in Sources */,
 				96F0BC54223AEF5600A52B73 /* HomeScreen.swift in Sources */,
 				9685A394223327440074CA05 /* GameViewController.swift in Sources */,
