@@ -11,7 +11,6 @@
 		1A2A1FE657A5A5A2914B6FDD /* Pods_Meiun_Journey_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01B8B15C934FE44A001B20 /* Pods_Meiun_Journey_App.framework */; };
 		648B48267A2404E6B9038BB9 /* Pods_Meiun_Journey_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCEB2D4B829D435CF56152E /* Pods_Meiun_Journey_AppUITests.framework */; };
 		9685A38C223327440074CA05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A38B223327440074CA05 /* AppDelegate.swift */; };
-		9685A38E223327440074CA05 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9685A38D223327440074CA05 /* GameScene.sks */; };
 		9685A390223327440074CA05 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9685A38F223327440074CA05 /* Actions.sks */; };
 		9685A392223327440074CA05 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A391223327440074CA05 /* GameScene.swift */; };
 		9685A394223327440074CA05 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A393223327440074CA05 /* GameViewController.swift */; };
@@ -50,7 +49,6 @@
 		5DCEB2D4B829D435CF56152E /* Pods_Meiun_Journey_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meiun_Journey_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9685A388223327440074CA05 /* Meiun Journey App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meiun Journey App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9685A38B223327440074CA05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9685A38D223327440074CA05 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		9685A38F223327440074CA05 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		9685A391223327440074CA05 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		9685A393223327440074CA05 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				9685A3BF2233285F0074CA05 /* GoogleService-Info.plist */,
 				9685A38B223327440074CA05 /* AppDelegate.swift */,
-				9685A38D223327440074CA05 /* GameScene.sks */,
 				9685A38F223327440074CA05 /* Actions.sks */,
 				9685A391223327440074CA05 /* GameScene.swift */,
 				9685A393223327440074CA05 /* GameViewController.swift */,
@@ -291,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9685A397223327440074CA05 /* Main.storyboard in Resources */,
-				9685A38E223327440074CA05 /* GameScene.sks in Resources */,
 				9685A399223327460074CA05 /* Assets.xcassets in Resources */,
 				9685A39C223327460074CA05 /* LaunchScreen.storyboard in Resources */,
 				9685A390223327440074CA05 /* Actions.sks in Resources */,

@@ -11,14 +11,19 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    var displaySize : CGRect!;
 
     override func viewDidLoad() {
         super.viewDidLoad()
   
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
+        
+        displaySize = UIScreen.main.bounds;
+        
         let scene = HomeScreen()
-        scene.size = CGSize(width: 750, height:1334)
+        scene.size = CGSize(width: displaySize.width, height: displaySize.height)
         
                 
                 // Present the scene
