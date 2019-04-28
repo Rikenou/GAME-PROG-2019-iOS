@@ -15,11 +15,12 @@ class HomeScreen: SKScene {
     public var gameViewController : GameViewController!;
     
     private var displaySize: CGRect!;
-    public var exp = 0;
     
     private var agilityTouch = false;
     
     var PlayTextBox : SKSpriteNode!;
+    
+    private var ExpNumber : SKLabelNode!;
     
     override func didMove(to view: SKView) {
         displaySize = UIScreen.main.bounds;
@@ -58,7 +59,6 @@ class HomeScreen: SKScene {
         
         addChild(ExpText);
         
-        var ExpNumber : SKLabelNode;
         ExpNumber = SKLabelNode();
         
         ExpNumber.fontName = "Arial";
@@ -66,7 +66,7 @@ class HomeScreen: SKScene {
         ExpNumber.fontSize = 30.0;
         ExpNumber.position = CGPoint(x: ExpText.position.x + 120.0, y: displaySize.height * 0.9);
         
-        ExpNumber.text = String(exp);
+        ExpNumber.text = String(gameViewController.expEarned);
         
         addChild(ExpNumber);
         
@@ -132,6 +132,8 @@ class HomeScreen: SKScene {
             
             
         }
+        
+        ExpNumber.text = String(gameViewController.expEarned);
         
     }
     

@@ -13,9 +13,10 @@ import GameplayKit
 class GameViewController: UIViewController {
     
     private var displaySize : CGRect!;
-    private var minigameViewController : MinigameViewController!;
     
     public var homeScene = HomeScreen();
+    
+    public var expEarned = 0;
     
     override func loadView() {
         self.view = SKView();
@@ -29,8 +30,6 @@ class GameViewController: UIViewController {
         
         displaySize = UIScreen.main.bounds;
         
-        minigameViewController = MinigameViewController();
-        
         homeScene.size = CGSize(width: displaySize.width, height: displaySize.height);
         homeScene.gameViewController = self;
                 
@@ -41,6 +40,12 @@ class GameViewController: UIViewController {
             
             
         }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
         
     }
 
@@ -61,6 +66,9 @@ class GameViewController: UIViewController {
     }
     
     func loadMinigame(sceneName: String){
+        
+        var minigameViewController = MinigameViewController();
+        minigameViewController.setMainController(mainControl: self);
         
         minigameViewController.loadScene(sceneName: sceneName)
         

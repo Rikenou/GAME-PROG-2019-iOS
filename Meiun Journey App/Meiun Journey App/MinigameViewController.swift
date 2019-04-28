@@ -12,7 +12,11 @@ import GameplayKit
 
 class MinigameViewController: UIViewController {
     
+    private var MainController : GameViewController!;
+    
     private var displaySize : CGRect!;
+    
+    public var expEarned : Float!;
     
     override func loadView() {
         self.view = SKView();
@@ -28,6 +32,7 @@ class MinigameViewController: UIViewController {
         
         displaySize = UIScreen.main.bounds;
 
+        expEarned = 0;
         
     }
     
@@ -36,6 +41,11 @@ class MinigameViewController: UIViewController {
         super.viewWillAppear(animated);
         
         UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation");
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated);
         
     }
     
@@ -79,7 +89,15 @@ class MinigameViewController: UIViewController {
         
     }
     
+    public func setMainController(mainControl: GameViewController){
+        
+        MainController = mainControl;
+        
+    }
+    
     func returnHome(){
+        
+        MainController.expEarned += Int(expEarned);
         
         self.navigationController?.popViewController(animated: true);
         

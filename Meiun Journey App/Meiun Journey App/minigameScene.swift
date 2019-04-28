@@ -55,4 +55,15 @@ class minigameScene: SKScene {
         
     }
     
+    func returnHome(){
+        
+        self.removeFromParent();
+        self.view?.presentScene(nil);
+        
+        
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation");
+        ViewController.returnHome();
+        
+    }
+    
 }
