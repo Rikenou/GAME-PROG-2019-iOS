@@ -38,8 +38,11 @@ class HomeScreen: SKScene {
         
         var BlackPic : SKSpriteNode!;
         BlackPic = SKSpriteNode.init(imageNamed: "BlackNoBG");
-        BlackPic.position = CGPoint(x: displaySize.width / 1.6, y: displaySize.height / 2.25);
-        BlackPic.size = CGSize(width: BlackPic.size.width / 2.5, height: BlackPic.size.height / 2.5);
+        BlackPic.position = CGPoint(x: displaySize.width * 0.7, y: displaySize.height * 0.4);
+        
+        var scale = displaySize.height * 0.75 / BlackPic.size.height;
+        
+        BlackPic.size = CGSize(width: BlackPic.size.width * scale, height: BlackPic.size.height * scale);
         
         addChild(BlackPic);
         
