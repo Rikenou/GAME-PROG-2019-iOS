@@ -61,14 +61,7 @@ class GameViewController: UIViewController {
         minigameViewController.loadScene(sceneName: sceneName)
         
         self.present(minigameViewController, animated: true, completion: nil)
-    /*
-        if let view = self.view as! SKView? {
-            
-            view.presentScene(NewScene, transition: transition);
-            
-            
-        }
-    */
+        
     }
     
 }

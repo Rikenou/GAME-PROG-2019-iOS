@@ -26,19 +26,14 @@ class MinigameViewController: UIViewController {
         // including entities and graphs.
         
         displaySize = UIScreen.main.bounds;
-        platformScene.size = CGSize(width: displaySize.width, height: displaySize.height);
-        platformScene.ViewController = self;
         
-        if let view = self.view as! SKView? {
-            
-            view.presentScene(platformScene);
-            
-        }
+        platformScene.ViewController = self;
+        platformScene.size = CGSize(width: displaySize.width, height: displaySize.height);
         
     }
     
     override var shouldAutorotate: Bool {
-        return false;
+        return true;
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -67,6 +62,7 @@ class MinigameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             
+            NewScene.scaleMode = SKSceneScaleMode.aspectFill;
             view.presentScene(NewScene, transition: transition);
             
             
