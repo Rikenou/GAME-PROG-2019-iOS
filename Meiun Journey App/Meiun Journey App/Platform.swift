@@ -11,21 +11,22 @@ import GameplayKit
 
 class Platform: SKScene {
     
-    private var displaySize : CGRect!;
+    private var displaySize : CGSize!;
     
     public var ViewController : MinigameViewController!;
     
     override func sceneDidLoad() {
         
-        displaySize = UIScreen.main.bounds;        
+        var temp = UIScreen.main.bounds;
+        displaySize = CGSize(width: temp.height, height: temp.width);
         backgroundColor = SKColor.black;
         
         var quitText = SKLabelNode();
         
         quitText.fontName = "Arial";
         quitText.fontColor = SKColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
-        quitText.fontSize = 20.0;
-        quitText.position = CGPoint(x: displaySize.width * 0.15, y: displaySize.height / 0.8);
+        quitText.fontSize = 100.0;
+        quitText.position = CGPoint(x: displaySize.width * 0.5, y: displaySize.height * 0.5);
         
         quitText.text = "Quit";
         

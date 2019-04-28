@@ -28,7 +28,7 @@ class MinigameViewController: UIViewController {
         displaySize = UIScreen.main.bounds;
         
         platformScene.ViewController = self;
-        platformScene.size = CGSize(width: displaySize.width, height: displaySize.height);
+        platformScene.size = CGSize(width: displaySize.height, height: displaySize.width);
         
     }
     
