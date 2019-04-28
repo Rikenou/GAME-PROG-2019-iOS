@@ -12,6 +12,8 @@ import GameplayKit
 
 class HomeScreen: SKScene {
     
+    public var gameViewController : GameViewController!;
+    
     private var displaySize: CGRect!;
     public var exp = 0;
     
@@ -90,7 +92,7 @@ class HomeScreen: SKScene {
     func touchDown(atPoint pos : CGPoint) {
         if(pos.x >= PlayTextBox.position.x - PlayTextBox.size.width / 2 && pos.x <= PlayTextBox.position.x + PlayTextBox.size.width / 2  && pos.y >= PlayTextBox.position.y - PlayTextBox.size.height / 2 && pos.y <= PlayTextBox.position.y + PlayTextBox.size.height / 2){
             
-            
+            agilityTouch = true;
             
         }
     }
@@ -118,6 +120,15 @@ class HomeScreen: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        
+        if(agilityTouch == true){
+            
+            agilityTouch = false;
+            
+            gameViewController.loadMinigame(sceneName: "PlatformJump");
+            
+            
+        }
         
     }
     

@@ -1,8 +1,8 @@
 //
-//  GameViewController.swift
+//  MinigameViewController.swift
 //  Meiun Journey App
 //
-//  Created by Jonathan Leung on 3/8/19.
+//  Created by Jonathan Leung on 2019-04-27.
 //  Copyright © 2019 Jonathan Leung. All rights reserved.
 //
 
@@ -10,65 +10,68 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class MinigameViewController: UIViewController {
     
     private var displaySize : CGRect!;
-    private var minigameViewController : MinigameViewController!;
+    private var platformScene = Platform();
     
-    public var homeScene = HomeScreen();
+    override func loadView() {
+        self.view = SKView();
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         
         displaySize = UIScreen.main.bounds;
+        platformScene.size = CGSize(width: displaySize.width, height: displaySize.height);
+        platformScene.ViewController = self;
         
-        minigameViewController = MinigameViewController();
-        
-        homeScene.size = CGSize(width: displaySize.width, height: displaySize.height);
-        homeScene.gameViewController = self;
-                
-                // Present the scene
         if let view = self.view as! SKView? {
             
-            view.presentScene(homeScene);
-            
+            view.presentScene(platformScene);
             
         }
         
     }
-
+    
     override var shouldAutorotate: Bool {
         return false;
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return .portrait
+            return .landscape
         } else {
-            return .portrait
+            return .landscape
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
-    func loadMinigame(sceneName: String){
+    func loadScene(sceneName: String){
         
-        minigameViewController.loadScene(sceneName: sceneName)
+        var transition = SKTransition.fade(withDuration: 1);
         
-        self.present(minigameViewController, animated: true, completion: nil)
-    /*
+        var NewScene = SKScene();
+        
+        if(sceneName == "PlatformJump"){
+            
+            NewScene = platformScene;
+            
+        }
+        
         if let view = self.view as! SKView? {
             
             view.presentScene(NewScene, transition: transition);
             
             
         }
-    */
+        
     }
     
 }
