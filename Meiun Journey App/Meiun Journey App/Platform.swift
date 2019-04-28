@@ -8,7 +8,7 @@
 
 import SpriteKit
 import GameplayKit
-
+//An obstacle class for multiple instantiations
 class Obstacle {
     
     private var y : Float!;
@@ -44,7 +44,7 @@ class Obstacle {
     }
     
 }
-
+//Inherit off minigame scene
 class Platform: minigameScene {
     
     var fingerOff = true;
@@ -117,13 +117,13 @@ class Platform: minigameScene {
     
     
     override func touchDown(atPoint pos : CGPoint) {
-        
+        //Check if use presses the Quit button
         if(pos.x >= quitTextBox.position.x - quitTextBox.size.width / 2 && pos.x <= quitTextBox.position.x + quitTextBox.size.width / 2 ){
             
             returnHome();
             
         }
-            
+        //Only allow Jumps when the player is on the ground
         else if (onGround){
             
             fingerOff = false;
@@ -155,10 +155,11 @@ class Platform: minigameScene {
             lastTime = currentTime;
             
         }
-        
+        //Calculate deltaTime
         var deltaTime = CGFloat(currentTime - lastTime);
         lastTime = currentTime;
         
+        //Randomize obstacle spawn and spawnrate
         if(spawnInterval == 0.0){
             
             spawnInterval = CGFloat.random(in: CGFloat(1.0) ..< CGFloat(5.0));
@@ -196,6 +197,7 @@ class Platform: minigameScene {
             var point3  = CGPoint(x: obstacleList[i].image.position.x - obstacleList[i].image.size.width / 2, y: obstacleList[i].image.position.y + obstacleList[i].image.size.height / 2);
             var point4  = CGPoint(x: obstacleList[i].image.position.x - obstacleList[i].image.size.width / 2, y: obstacleList[i].image.position.y - obstacleList[i].image.size.height / 2);
             
+            //Simple box collision detection
             var collided = false;
             
             if(blackPoint1.x <= point1.x && blackPoint1.x >= point4.x && blackPoint1.y <= point1.y && blackPoint1.y >= point4.y){
@@ -235,7 +237,7 @@ class Platform: minigameScene {
                 returnHome();
                 
             }
-            
+            //Kill obstacles that fly offscreen
             if(obstacleList[i].image.position.x > displaySize.width + 50){
                 
                 obstacleList[i].destroy()
@@ -250,18 +252,19 @@ class Platform: minigameScene {
             obstacleList.remove(at: o)
             
         }
-        
+        //Add Exp
         ViewController.expEarned += Float(deltaTime);
         expEarn += deltaTime;
         
         var downForce = CGFloat(0.0);
-        
+        //Variable jump height based on how long user holds the press
         if(fingerOff && blackSpeedY > 0){
             
             downForce = CGFloat(25.0 * -9.8);
             
         }
         
+        //Simple verticle physics
         var s = blackSpeedY * deltaTime;
         s += 0.5 * (-9.8 * 7.5 + downForce) * deltaTime * deltaTime;
         
@@ -275,7 +278,7 @@ class Platform: minigameScene {
             
         }
         else{
-            
+            //Animation controls
             if(onGround == false){
                 
                 blackImageFrame = 0;
@@ -291,7 +294,7 @@ class Platform: minigameScene {
             onGround = true;
             
         }
-        
+        //Animate idle loop when standing on ground
         if(onGround == true){
         
             if(timer < 0.1){
@@ -318,13 +321,13 @@ class Platform: minigameScene {
             }
             
         }
-        
+        //If in air, set to jump picture
         else{
             
             Black.texture = blackTexture[9];
             
         }
-        
+        //Make sure UI elements are in front
         quitTextBox.removeFromParent();
         addChild(quitTextBox);
         quitText.removeFromParent();

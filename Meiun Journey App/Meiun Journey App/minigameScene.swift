@@ -16,7 +16,7 @@ class minigameScene: SKScene {
     public var ViewController : MinigameViewController!;
     
     override func sceneDidLoad() {
-        
+        //Sets things up for the game to be played in landscape mode
         var temp = UIScreen.main.bounds;
         displaySize = CGSize(width: temp.height, height: temp.width);
         self.size = CGSize(width: displaySize.width, height: displaySize.height);
@@ -54,12 +54,12 @@ class minigameScene: SKScene {
         // Called before each frame is rendered
         
     }
-    
+    //Return to homescreen
     func returnHome(){
         
+        //Reset the scene
         self.removeFromParent();
         self.view?.presentScene(nil);
-        
         
         UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation");
         ViewController.returnHome();

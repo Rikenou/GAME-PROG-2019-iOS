@@ -26,7 +26,7 @@ class HomeScreen: SKScene {
         displaySize = UIScreen.main.bounds;
         
         backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0);
-        /*
+        /* Old test code
         let hello : SKLabelNode!;
         hello = SKLabelNode(fontNamed: "Arial")
 
@@ -93,6 +93,7 @@ class HomeScreen: SKScene {
     }
     
     func touchDown(atPoint pos : CGPoint) {
+        //Check if player presses on the Agility training button
         if(pos.x >= PlayTextBox.position.x - PlayTextBox.size.width / 2 && pos.x <= PlayTextBox.position.x + PlayTextBox.size.width / 2  && pos.y >= PlayTextBox.position.y - PlayTextBox.size.height / 2 && pos.y <= PlayTextBox.position.y + PlayTextBox.size.height / 2){
             
             agilityTouch = true;
@@ -127,7 +128,7 @@ class HomeScreen: SKScene {
         if(agilityTouch == true){
             
             agilityTouch = false;
-            
+            //Load agility training minigame
             gameViewController.loadMinigame(sceneName: "PlatformJump");
             
             

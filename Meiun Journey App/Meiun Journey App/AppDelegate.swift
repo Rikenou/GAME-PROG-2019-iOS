@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure();
         
+        //Use pure coding for scene switching, I can't load storyboards anyway
         window = UIWindow(frame: UIScreen.main.bounds)
         
         if let window = window {
