@@ -17,6 +17,10 @@ class GameViewController: UIViewController {
     
     public var homeScene = HomeScreen();
     
+    override func loadView() {
+        self.view = SKView();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
   
@@ -41,7 +45,7 @@ class GameViewController: UIViewController {
     }
 
     override var shouldAutorotate: Bool {
-        return false;
+        return true;
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -60,7 +64,8 @@ class GameViewController: UIViewController {
         
         minigameViewController.loadScene(sceneName: sceneName)
         
-        self.present(minigameViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(minigameViewController, animated: true);
+        //self.present(minigameViewController, animated: true, completion: nil)
         
     }
     

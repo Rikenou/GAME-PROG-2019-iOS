@@ -9,55 +9,51 @@
 import SpriteKit
 import GameplayKit
 
-class Platform: SKScene {
+class Platform: minigameScene {
     
-    private var displaySize : CGSize!;
-    
-    public var ViewController : MinigameViewController!;
+    var quitTextBox : SKSpriteNode!;
     
     override func sceneDidLoad() {
         
-        var temp = UIScreen.main.bounds;
-        displaySize = CGSize(width: temp.height, height: temp.width);
+        super.sceneDidLoad();
+        
         backgroundColor = SKColor.black;
         
         var quitText = SKLabelNode();
         
         quitText.fontName = "Arial";
         quitText.fontColor = SKColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
-        quitText.fontSize = 100.0;
-        quitText.position = CGPoint(x: displaySize.width * 0.5, y: displaySize.height * 0.5);
+        quitText.fontSize = 30.0;
+        quitText.position = CGPoint(x: 50, y: displaySize.height * 0.85);
         
         quitText.text = "Quit";
         
+        
+        quitTextBox = SKSpriteNode.init(imageNamed: "IOSFat");
+        
+        quitTextBox.position = CGPoint(x: quitText.position.x, y: quitText.position.y + 10.0);
+        quitTextBox.size = CGSize(width: quitTextBox.size.width / 4, height: quitTextBox.size.height / 4);
+        
+        addChild(quitTextBox);
         addChild(quitText);
         
     }
     
     
-    func touchDown(atPoint pos : CGPoint) {
+    override func touchDown(atPoint pos : CGPoint) {
+        
+        if(pos.x >= quitTextBox.position.x - quitTextBox.size.width / 2 && pos.x <= quitTextBox.position.x + quitTextBox.size.width / 2 ){
+            
+            ViewController?.returnHome();
+            
+        }
+        
     }
     
-    func touchMoved(toPoint pos : CGPoint) {
+    override func touchMoved(toPoint pos : CGPoint) {
     }
     
-    func touchUp(atPoint pos : CGPoint) {
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+    override func touchUp(atPoint pos : CGPoint) {
     }
     
     

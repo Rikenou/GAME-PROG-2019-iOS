@@ -12,16 +12,15 @@
 		648B48267A2404E6B9038BB9 /* Pods_Meiun_Journey_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCEB2D4B829D435CF56152E /* Pods_Meiun_Journey_AppUITests.framework */; };
 		9685A38C223327440074CA05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A38B223327440074CA05 /* AppDelegate.swift */; };
 		9685A390223327440074CA05 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9685A38F223327440074CA05 /* Actions.sks */; };
-		9685A392223327440074CA05 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A391223327440074CA05 /* GameScene.swift */; };
 		9685A394223327440074CA05 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A393223327440074CA05 /* GameViewController.swift */; };
-		9685A397223327440074CA05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9685A395223327440074CA05 /* Main.storyboard */; };
 		9685A399223327460074CA05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9685A398223327460074CA05 /* Assets.xcassets */; };
-		9685A39C223327460074CA05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9685A39A223327460074CA05 /* LaunchScreen.storyboard */; };
 		9685A3A7223327460074CA05 /* Meiun_Journey_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A3A6223327460074CA05 /* Meiun_Journey_AppTests.swift */; };
 		9685A3B2223327460074CA05 /* Meiun_Journey_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685A3B1223327460074CA05 /* Meiun_Journey_AppUITests.swift */; };
 		9695942922756A9200A95848 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9695942822756A9200A95848 /* GoogleService-Info.plist */; };
 		9695942A22756A9200A95848 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9695942822756A9200A95848 /* GoogleService-Info.plist */; };
 		9695942B22756A9200A95848 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9695942822756A9200A95848 /* GoogleService-Info.plist */; };
+		9695942D2275797800A95848 /* MeiunNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695942C2275797800A95848 /* MeiunNavigationController.swift */; };
+		9695942F2275843700A95848 /* minigameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695942E2275843700A95848 /* minigameScene.swift */; };
 		96E503EB2275103D00CBFE7E /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E503EA2275103D00CBFE7E /* Platform.swift */; };
 		96E503ED2275277A00CBFE7E /* MinigameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E503EC2275277A00CBFE7E /* MinigameViewController.swift */; };
 		96F0BC54223AEF5600A52B73 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0BC53223AEF5600A52B73 /* HomeScreen.swift */; };
@@ -52,11 +51,8 @@
 		9685A388223327440074CA05 /* Meiun Journey App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meiun Journey App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9685A38B223327440074CA05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9685A38F223327440074CA05 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		9685A391223327440074CA05 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		9685A393223327440074CA05 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		9685A396223327440074CA05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9685A398223327460074CA05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9685A39B223327460074CA05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9685A39D223327460074CA05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9685A3A2223327460074CA05 /* Meiun Journey AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meiun Journey AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9685A3A6223327460074CA05 /* Meiun_Journey_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meiun_Journey_AppTests.swift; sourceTree = "<group>"; };
@@ -65,6 +61,8 @@
 		9685A3B1223327460074CA05 /* Meiun_Journey_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meiun_Journey_AppUITests.swift; sourceTree = "<group>"; };
 		9685A3B3223327460074CA05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9695942822756A9200A95848 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9695942C2275797800A95848 /* MeiunNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiunNavigationController.swift; sourceTree = "<group>"; };
+		9695942E2275843700A95848 /* minigameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigameScene.swift; sourceTree = "<group>"; };
 		96E503EA2275103D00CBFE7E /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		96E503EC2275277A00CBFE7E /* MinigameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinigameViewController.swift; sourceTree = "<group>"; };
 		96F0BC53223AEF5600A52B73 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; tabWidth = 5; };
@@ -153,15 +151,14 @@
 			children = (
 				9685A38B223327440074CA05 /* AppDelegate.swift */,
 				9685A38F223327440074CA05 /* Actions.sks */,
-				9685A391223327440074CA05 /* GameScene.swift */,
+				9695942C2275797800A95848 /* MeiunNavigationController.swift */,
 				9685A393223327440074CA05 /* GameViewController.swift */,
-				9695942822756A9200A95848 /* GoogleService-Info.plist */,
-				96F0BC53223AEF5600A52B73 /* HomeScreen.swift */,
-				96E503EA2275103D00CBFE7E /* Platform.swift */,
 				96E503EC2275277A00CBFE7E /* MinigameViewController.swift */,
-				9685A395223327440074CA05 /* Main.storyboard */,
+				96F0BC53223AEF5600A52B73 /* HomeScreen.swift */,
+				9695942E2275843700A95848 /* minigameScene.swift */,
+				96E503EA2275103D00CBFE7E /* Platform.swift */,
 				9685A398223327460074CA05 /* Assets.xcassets */,
-				9685A39A223327460074CA05 /* LaunchScreen.storyboard */,
+				9695942822756A9200A95848 /* GoogleService-Info.plist */,
 				9685A39D223327460074CA05 /* Info.plist */,
 			);
 			path = "Meiun Journey App";
@@ -293,10 +290,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9685A397223327440074CA05 /* Main.storyboard in Resources */,
 				9685A399223327460074CA05 /* Assets.xcassets in Resources */,
 				9695942922756A9200A95848 /* GoogleService-Info.plist in Resources */,
-				9685A39C223327460074CA05 /* LaunchScreen.storyboard in Resources */,
 				9685A390223327440074CA05 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,9 +414,10 @@
 			files = (
 				96E503EB2275103D00CBFE7E /* Platform.swift in Sources */,
 				96E503ED2275277A00CBFE7E /* MinigameViewController.swift in Sources */,
-				9685A392223327440074CA05 /* GameScene.swift in Sources */,
 				96F0BC54223AEF5600A52B73 /* HomeScreen.swift in Sources */,
 				9685A394223327440074CA05 /* GameViewController.swift in Sources */,
+				9695942D2275797800A95848 /* MeiunNavigationController.swift in Sources */,
+				9695942F2275843700A95848 /* minigameScene.swift in Sources */,
 				9685A38C223327440074CA05 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,25 +452,6 @@
 			targetProxy = 9685A3AE223327460074CA05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9685A395223327440074CA05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9685A396223327440074CA05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9685A39A223327460074CA05 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9685A39B223327460074CA05 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9685A3B4223327460074CA05 /* Debug */ = {
@@ -607,7 +584,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "HARIKEN.Meiun-Journey-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -625,7 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "HARIKEN.Meiun-Journey-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -13,7 +13,6 @@ import GameplayKit
 class MinigameViewController: UIViewController {
     
     private var displaySize : CGRect!;
-    private var platformScene = Platform();
     
     override func loadView() {
         self.view = SKView();
@@ -25,10 +24,18 @@ class MinigameViewController: UIViewController {
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         
-        displaySize = UIScreen.main.bounds;
+        self.definesPresentationContext = true;
         
-        platformScene.ViewController = self;
-        platformScene.size = CGSize(width: displaySize.height, height: displaySize.width);
+        displaySize = UIScreen.main.bounds;
+
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated);
+        
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation");
         
     }
     
@@ -52,13 +59,15 @@ class MinigameViewController: UIViewController {
         
         var transition = SKTransition.fade(withDuration: 1);
         
-        var NewScene = SKScene();
+        var NewScene = minigameScene();
         
         if(sceneName == "PlatformJump"){
             
-            NewScene = platformScene;
+            NewScene = Platform();
             
         }
+        
+        NewScene.ViewController = self;
         
         if let view = self.view as! SKView? {
             
@@ -67,6 +76,12 @@ class MinigameViewController: UIViewController {
             
             
         }
+        
+    }
+    
+    func returnHome(){
+        
+        self.navigationController?.popViewController(animated: true);
         
     }
     

@@ -52,7 +52,7 @@ class HomeScreen: SKScene {
         ExpText.fontName = "Arial";
         ExpText.fontColor = SKColor(red: 1.0, green: 0.2, blue: 0.0, alpha: 1.0);
         ExpText.fontSize = 30.0;
-        ExpText.position = CGPoint(x: displaySize.width / 4, y: displaySize.height * 0.9);
+        ExpText.position = CGPoint(x: 90, y: displaySize.height * 0.9);
         
         ExpText.text = "EXP Earned: ";
         
@@ -76,13 +76,13 @@ class HomeScreen: SKScene {
         PlayText.fontName = "Arial";
         PlayText.fontColor = SKColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
         PlayText.fontSize = 20.0;
-        PlayText.position = CGPoint(x: displaySize.width / 4.4, y: ExpText.position.y - 70.0);
+        PlayText.position = CGPoint(x: 85, y: ExpText.position.y - 70.0);
         
         PlayText.text = "Agility Training";
         
         PlayTextBox = SKSpriteNode.init(imageNamed: "IOSThin");
         
-        PlayTextBox.position = CGPoint(x: PlayText.position.x + 2.5, y: PlayText.position.y + 10);
+        PlayTextBox.position = CGPoint(x: PlayText.position.x + 2.5, y: PlayText.position.y + 7.5);
         PlayTextBox.size = CGSize(width: PlayTextBox.size.width / 2, height: PlayTextBox.size.height / 2);
         
         addChild(PlayTextBox);
